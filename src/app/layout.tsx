@@ -36,13 +36,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head />
       <body
-        suppressHydrationWarning
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
           inter.className
         )}
+        suppressHydrationWarning
       >
         <ThemeProvider>
           <div className="relative flex min-h-screen flex-col">

@@ -10,22 +10,16 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     setMounted(true);
   }, []);
 
-  if (!mounted) {
-    return (
-      <div style={{ visibility: "hidden" }}>
-        {children}
-      </div>
-    );
-  }
-
   return (
-    <NextThemesProvider
-      attribute="class"
-      defaultTheme="system"
-      enableSystem
-      disableTransitionOnChange
-    >
-      {children}
-    </NextThemesProvider>
+    <div suppressHydrationWarning>
+      <NextThemesProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
+      >
+        {mounted ? children : null}
+      </NextThemesProvider>
+    </div>
   );
 }
