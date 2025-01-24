@@ -178,21 +178,6 @@ const itemVariants = {
   }
 }
 
-const mockFighters = [
-  {
-    id: "1",
-    name: "Alex &apos;The Thunder&apos; Thompson",
-    location: "Las Vegas, USA",
-    weightClass: "Middleweight",
-    record: "15-2-0",
-    rating: 4.8,
-    verified: true,
-    available: true,
-    image: "/profile-1.avif"
-  }
-  // ... rest of the mock fighters
-]
-
 export default function HomePage() {
   return (
     <PageTransition>
@@ -301,7 +286,7 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/50">Upcoming Events</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Don't miss out on these exciting opportunities
+              Don&apos;t miss out on these exciting opportunities
             </p>
           </div>
           <motion.div 

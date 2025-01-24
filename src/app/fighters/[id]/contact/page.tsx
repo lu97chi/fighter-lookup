@@ -1,10 +1,10 @@
 "use client"
 
+import { PageTransition } from "@/components/ui/page-transition"
 import { motion } from "framer-motion"
+import { ArrowLeft, MessageSquare, Shield } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowLeft, MessageSquare, Calendar, Shield } from "lucide-react"
-import { PageTransition } from "@/components/ui/page-transition"
 
 // Mock data for demonstration
 const mockFighter = {

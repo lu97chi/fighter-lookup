@@ -1,10 +1,9 @@
 "use client"
 
-import { motion } from "framer-motion"
-import Image from "next/image"
-import Link from "next/link"
-import { ArrowLeft, MessageSquare, Building2, Shield, Star } from "lucide-react"
 import { PageTransition } from "@/components/ui/page-transition"
+import { motion } from "framer-motion"
+import { ArrowLeft, Building2, MessageSquare, Shield, Star } from "lucide-react"
+import Link from "next/link"
 
 // Mock data for demonstration
 const mockPromoter = {

@@ -1,10 +1,10 @@
 "use client"
 
-import { useState } from "react"
-import { motion } from "framer-motion"
-import { ArrowLeft, Upload, Calendar, Scale, Info } from "lucide-react"
-import Link from "next/link"
 import { PageTransition } from "@/components/ui/page-transition"
+import { motion } from "framer-motion"
+import { ArrowLeft, Upload } from "lucide-react"
+import Link from "next/link"
+import { useState } from "react"
 
 export default function ApplyPage() {
   const [step, setStep] = useState(1)
