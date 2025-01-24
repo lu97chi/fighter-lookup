@@ -6,8 +6,6 @@ import { ScrollToTop } from "@/components/ui/scroll-to-top";
 import type { Metadata } from "next";
 import "./globals.css";
 
-
-
 export const metadata: Metadata = {
   title: "Fighter Lookup",
   description: "Connect fighters with opportunities worldwide",
@@ -34,17 +32,27 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head />
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body className="min-h-screen bg-background font-sans antialiased">
-        <ThemeProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
           <div className="relative flex min-h-screen flex-col">
             <SiteHeader />
             <div className="flex-1">{children}</div>
             <SiteFooter />
           </div>
+          <FloatingContact />
+          <ScrollToTop />
         </ThemeProvider>
-        <FloatingContact />
-        <ScrollToTop />
       </body>
     </html>
   );
