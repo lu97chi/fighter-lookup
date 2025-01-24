@@ -23,7 +23,7 @@ export function PageTransition({ children, className }: PageTransitionProps) {
   }, []);
 
   return (
-    <div suppressHydrationWarning>
+    <div className={cn("min-h-[calc(100vh-4rem)]", className)}>
       {isMounted ? (
         <motion.div
           initial="hidden"
@@ -31,14 +31,11 @@ export function PageTransition({ children, className }: PageTransitionProps) {
           exit="exit"
           variants={variants}
           transition={{ duration: 0.2, ease: "easeInOut" }}
-          className={cn("min-h-[calc(100vh-4rem)]", className)}
         >
           {children}
         </motion.div>
       ) : (
-        <div className={cn("min-h-[calc(100vh-4rem)]", className)}>
-          {children}
-        </div>
+        children
       )}
     </div>
   )

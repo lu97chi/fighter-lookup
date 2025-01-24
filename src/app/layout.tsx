@@ -35,13 +35,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="light">
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
           inter.className
         )}
-        suppressHydrationWarning
       >
         <ThemeProvider>
           <div className="relative flex min-h-screen flex-col">
