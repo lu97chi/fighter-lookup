@@ -1,14 +1,12 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/providers/theme-provider";
-import { SiteHeader } from "@/components/shared/site-header";
 import { SiteFooter } from "@/components/shared/site-footer";
+import { SiteHeader } from "@/components/shared/site-header";
 import { FloatingContact } from "@/components/ui/floating-contact";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
+import type { Metadata } from "next";
+import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+
 
 export const metadata: Metadata = {
   title: "Fighter Lookup",
@@ -35,22 +33,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className="light">
-      <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          inter.className
-        )}
-      >
+    <html lang="en" suppressHydrationWarning>
+      <head />
+      <body className="min-h-screen bg-background font-sans antialiased">
         <ThemeProvider>
           <div className="relative flex min-h-screen flex-col">
             <SiteHeader />
-            <main className="flex-1">{children}</main>
+            <div className="flex-1">{children}</div>
             <SiteFooter />
-            <FloatingContact />
-            <ScrollToTop />
           </div>
         </ThemeProvider>
+        <FloatingContact />
+        <ScrollToTop />
       </body>
     </html>
   );
